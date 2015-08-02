@@ -1,0 +1,212 @@
+/****************************
+ - This is CSS for Resume
+ ****************************/
+
+
+/*
+ * General
+ */
+html, body {
+    overflow: hidden
+}
+
+html, body {
+    height: 100%;
+}
+
+#resume-wrapper {
+	width: 740px;
+	max-width: 740px;
+	min-width: 740px;
+	margin: 60px auto;
+	font-size: 16px;
+	z-index: 10;
+}
+
+#resume-wrapper a {
+	color: #3A99D8;
+	text-decoration: underline;
+}
+
+
+/*
+ * Entry Question
+ */
+#entry-question-bg {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	opacity: 0.9;
+	z-index: 1000;
+	display: table;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "AkkuratRegular", "AkkuratLightRegular", serif;
+}
+
+.entry-question-wrapper {
+	display: table-cell; 
+	vertical-align: middle;
+    margin: 0 auto;
+	text-align: center;
+	background-color: #191919;
+}
+
+.entry-question-wrapper h1 {
+	font-family: "AkkuratLightRegular", serif;
+	color: #FFF;
+	font-size: 20px;
+	margin-bottom: 10px;
+	opacity: 1.0;
+}
+
+.entry-question-wrapper button {
+	font-family: "AkkuratLightRegular", serif;
+	color: #FFF;
+	font-size: 16px;
+	opacity: 1.0;
+}
+
+/*
+ * Header
+ */
+#resume-header {
+	width: 100%;
+	height: 120px;
+	margin-bottom: 30px;
+}
+
+#resume-header .header-left {
+	width: 500px;
+	float: left;
+}
+
+.profile-img-wrapper {
+	float: left;
+}
+
+.profile-img-wrapper img {
+	width: 120px;
+	height: 120px;
+	border-radius: 120px;
+	-webkit-border-radius: 120px;
+	-moz-border-radius: 120px;
+}
+
+.profile-discription {
+	float: left;
+	margin-left: 14px;
+	line-height: 1.0;
+}
+
+.profile-discription p {
+	margin-bottom: 0px;
+}
+
+.profile-discription .name {
+	font-size: 40px;
+	margin-bottom: 16px;
+	font-family: "AkkuratRegular", "AkkuratLightRegular", serif;
+}
+
+.profile-discription .job {
+	margin-left: 2px;
+	margin-bottom: 8px;
+}
+
+.profile-discription .address {
+	margin-left: 2px;
+	margin-bottom: 10px;
+}
+
+.profile-discription .address i {
+	margin-right: 6px;
+}
+
+.profile-discription .sns-links {
+	margin-left: 2px;
+	margin-bottom: 4px;
+}
+
+#resume-header .header-right {
+	float: right;
+}
+
+#resume-header .header-right li {
+	font-size: 14px;
+	list-style: none;
+}
+
+#resume-header .header-right li i {
+	margin-right: 10px;
+}
+ 
+ 
+/*
+ * Body
+ */
+#resume-body {
+	
+}
+
+#resume-body .resume-block {
+	border-top: 1px solid #e7e7e7;
+	padding-top: 16px;
+}
+
+#resume-body .resume-block:first-child {
+	border-top: none;
+	padding-top: 0;
+}
+
+.resume-block .block-title {
+	font-size: 20px;
+	font-family: "AkkuratRegular", "AkkuratLightRegular", serif;
+	margin-bottom: 5px;
+}
+
+.job-block {
+	margin-bottom: 30px;
+}
+
+.job-block p {
+	margin-bottom: 0;
+}
+
+.job-block .term {
+	font-size: 14px;
+	text-decoration: underline;
+}
+
+.job-block .job-title {
+	font-family: "AkkuratRegular", "AkkuratLightRegular", serif;
+}
+
+.edu-block {
+	margin-bottom: 30px;
+}
+
+.edu-block p {
+	margin-bottom: 0;
+}
+
+.edu-block .term {
+	font-size: 14px;
+	text-decoration: underline;
+}
+
+.edu-block .department {
+	font-family: "AkkuratRegular", "AkkuratLightRegular", serif;
+}
+ 
+/*
+ * Footer
+ */
+
+#resume-footer {
+	text-align: center;
+	margin-top: 50px;
+}

@@ -23,6 +23,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php include_once("analytics/trackingcode.php") ?>
+
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 		<div id="header-menu" class="<?php if (is_user_logged_in()) { echo 'logged-in'; } ?>">

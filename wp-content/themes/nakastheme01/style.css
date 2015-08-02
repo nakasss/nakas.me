@@ -198,6 +198,11 @@ a img {
  */
  
 @font-face {
+	font-family: "AkkuratRegular";
+	src: url(fonts/akkurat-regular.otf);
+}
+
+@font-face {
 	font-family: "AkkuratLightRegular";
 	src: url(fonts/akkurat-light-regular.otf);
 }
@@ -208,7 +213,7 @@ input,
 select,
 textarea {
 	color: #333;
-	font-family: "AkkuratLightRegular", "Noto Serif", serif;
+	font-family: "AkkuratLightRegular", "AkkuratRegular", "Noto Serif", serif;
 	font-size: 15px;
 	font-size: 1.5rem;
 	line-height: 1.6;

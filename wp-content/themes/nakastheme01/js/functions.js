@@ -158,5 +158,18 @@
 			setTimeout( resizeAndScroll, 100 * i );
 		}
 	} );
+	
+	
+	/* Menu Activate */
+    $('#header-menu ul li a').each(function(){
+        var $href = $(this).attr('href');
+        if(location.href === $href) {
+	        $(this).addClass('active');
+        } else if (location.href.match('nakas.me/blog/')) {
+			$('#header-menu ul li:first-child a').addClass('active');
+        } else {
+	        $(this).removeClass('active');
+        }
+    });
 
 } )( jQuery );

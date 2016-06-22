@@ -86,6 +86,14 @@ html {
 
 body {
 	background: #ffffff;
+	width: auto;
+}
+
+#page {
+	width: auto;
+	max-width: 1210px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 article,
@@ -213,7 +221,7 @@ input,
 select,
 textarea {
 	color: #333;
-	font-family: "AkkuratLightRegular", "AkkuratRegular", "Noto Serif", serif;
+	font-family: "AkkuratLightRegular", "AkkuratRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	font-size: 1.5rem;
 	line-height: 1.6;
@@ -1306,15 +1314,24 @@ header.site-header {
 	top: 32px;
 }
 
-#header-menu ul {
+#header-menu #menu-main_menu {
 	width: 100%;
+	max-width: 1210px;
+	margin: 0 auto;
 }
 
 #header-menu ul li {
 	display: inline;
-	margin-left: 8px;
-	margin-right: 8px;
+	margin-left: 10px;
 	font-size: 18px;
+}
+
+#header-menu ul li:first-child {
+	margin-left: 0px;
+}
+
+#header-menu ul li a.active {
+	text-decoration: underline;
 }
 
 #header-logo {
@@ -1574,6 +1591,15 @@ header.site-header {
 /**
  * 12.1 Posts and pages
  */
+ 
+.site-main {
+	width: 100%;
+}
+ 
+.index-posts article {
+	margin-bottom: 60px;
+	padding: 0 20px;
+}
 
 .hentry {
 	width: 100%;
@@ -1630,7 +1656,7 @@ a.post-thumbnail:focus {
 
 .entry-content,
 .entry-summary {
-	padding: 0 7.6923% 7.6923%;
+	/* padding: 0 7.6923% 7.6923%; */
 }
 
 .entry-content > :last-child,
@@ -1779,6 +1805,10 @@ a.post-thumbnail:focus {
 	font-size: 16px;
 	position: relative;
 	top: 5px;
+}
+
+.entry-content .entry-thumbnail img {
+	width: 100%;
 }
 
 .author-info {
@@ -2100,6 +2130,88 @@ a.post-thumbnail:focus {
 	margin-bottom: 0;
 }
 
+/* Works */
+.works-main {
+	
+}
+
+.works-main .entry-content {
+	max-width: 1210px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.work-wrapper {
+	margin-bottom: 50px;
+}
+
+.work-description {
+	margin-bottom: 10px;
+}
+
+.work-description .title {
+	margin: 0;
+	margin-bottom: 5px;
+	font-weight: normal;
+}
+
+.work-description .created-year {
+	font-family: "Georgia","serif";
+	font-size: 15px;
+    color: #969696;
+}
+
+.work-img-wrapper img {
+	width: 100%;
+}
+
+/* About */
+.about-main {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.about-main #profile-img {
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	margin-bottom: 30px;
+}
+
+.about-main p {
+	width: auto;
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Contact */
+.contact-main {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.contact-main .entry-content a {
+	border: none;
+	text-decoration: none;
+}
+
+.contact-main .entry-content a.mail-link {
+	text-decoration: underline;
+}
+
+.contact-main .entry-content a .fa {
+	border: none;
+	font-size: 20px;
+	color: #3A99D8;
+}
+
+.contact-main .entry-content .fa-link .fa {
+	
+}
+
 
 /**
  * 12.2 Post Formats
@@ -2400,6 +2512,7 @@ a.post-thumbnail:focus {
 	font-size: 12px;
 	font-size: 1.2rem;
 	line-height: 1.5;
+	text-align: center;
 }
 
 .site-info a {

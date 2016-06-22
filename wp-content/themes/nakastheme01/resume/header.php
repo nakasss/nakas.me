@@ -3,8 +3,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="shortcut icon" href="<?php echo get_bloginfo('template_url'); ?>/favicon.ico" >
 	<link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('template_url'); ?>/resume/css/resume-style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="<?php echo get_bloginfo('template_url'); ?>/resume/js/jquery.js" charset="UTF-8"></script>
@@ -14,21 +13,21 @@
 		var clickYesBtn = function() {
 			deleteWrapper();
 			openWholeContent();
-		}
+		};
 		
 		var clickNoBtn = function() {
 			initEscape();
 			deleteWrapper();
-		}
+		};
 		
 		var deleteWrapper = function() {
 			//$('#entry-question-bg').hide('normal');
 			$('#entry-question-bg').fadeOut('slow');
-		}
+		};
 		
 		var openWholeContent = function() {
 			$('html, body').css('height', 'auto');
-		}
+		};
 		
 		var initEscape = function() {
 			//string
@@ -44,7 +43,30 @@
 			//btn & img
 			$('#profile-img').jdtRunAway();
 			$('.fa').jdtRunAway();
+		};
+		
+		var getDevice = function(){
+			var ua = navigator.userAgent;
+			if(ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0){
+			    return 'sp';
+			}else if(ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0){
+			    return 'tab';
+			}else{
+			    return 'other';
+			}
+		};
+		
+		//init
+		if (getDevice() !== 'other') {
+			jQuery(function($) {
+				$('#entry-question-bg').css('display', 'none');
+			});
+			openWholeContent();
+			console.log('mobile');
+		} else {
+			console.log('PC');
 		}
+
 	</script>
 	<title>Hi, I'm Yuta.</title>
 	<!--[if lt IE 9]>
@@ -80,19 +102,20 @@
 				</div>
 				<div class="profile-discription">
 					<p id="header-name" class="name">Yuta Nakagawa</p>
-					<p id="header-job" class="job">FRONT END ENGINEER</p>
+					<p class="job">
+						<span id="header-job">WEB DEVELOPER</span>
+						<a href="https://www.facebook.com/nakas0523" target="_blank"><i style="margin-left: 10px;" class="fa fa-facebook-square"></i></a>
+						<a href="https://www.linkedin.com/in/nakas" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+						<a href="https://github.com/yt-nkgw" target="_blank"><i class="fa fa-github-square"></i></a>
+					</p>
 					<p class="address"><i class="fa fa-map-marker"></i><span id="header-address">Tokyo JP</span></p>
-					<!-- <i class="fa fa-facebook-square"></i>
-						<i class="fa fa-twitter-square"></i>
-						<i class="fa fa-linkedin-square"></i>
-						<i class="fa fa-github-square"></i> -->
 				</div>
 			</div>
 			<div id="header-contact" class="header-right">
 				<ul>
 					<li><i class="fa fa-envelope"></i><span id="contact-mail">n.u0523[at]gmail.com</span></li>
 					<li><i class="fa fa-phone"></i><span id="contact-phone">(+81) 070-2811-6841</span></li>
-					<li><i class="fa fa-globe"></i><span id="contact-website"><a href="http://nakas.me" target="_blank">http://nakas.me</a></span></li>
+					<li><i class="fa fa-globe"></i><span id="contact-website"><a href="http://nakas.me/works/" target="_blank">http://nakas.me/works/</a></span></li>
 					<li><i class="fa fa-skype"></i><span id="contact-skype">n.yuta0523</span></li>
 				</ul>
 			</div>
